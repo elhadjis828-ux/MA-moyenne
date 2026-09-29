@@ -1,0 +1,205 @@
+/* --- Réinitialisation et styles globaux --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: blanchedalmond;
+}
+
+
+
+main {
+   max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+
+/* --- Formulaire et Fieldset --- */
+#form-calculateur {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+fieldset {
+  border: 2px solid #80797b;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+h1{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1c10c4;
+  padding: 0 10px;
+  margin: 30px;
+  
+}
+
+/* --- Alignement des champs par ligne --- */
+.ligne-matiere {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.ligne-matiere label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* --- Stylisation des Input --- */
+input[type="text"],
+input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+
+/* Redimensionnement précis selon la classe */
+.ligne-matiere input.nom {
+  flex: 2;
+  min-width: 150px;
+}
+
+.ligne-matiere input.note,
+.ligne-matiere input.coeff {
+  flex: 1;
+  min-width: 80px;
+}
+
+/* --- Boutons --- */
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 13px;
+  border: 10px;
+  background-color:  #007BFF;
+  color: #FFF;
+  border-radius: 20px;
+  transition: all 0.3 ease
+  
+
+}
+
+button:active {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+
+/* Bouton Ajouter */
+button[onclick*="ajouterMatiere"] {
+  background-color: #edf2f7;
+  color: #42042b;
+  border: 1px dashed #cbd5e1;
+  margin-top: 10px;
+  width: 100%;
+  border: 10px;
+}
+
+button[onclick*="ajouterMatiere"]:hover {
+  background-color: #e2e8f0;
+}
+
+/* Bouton Calculer */
+button[onclick*="calculerMoyenne"] {
+  background-color: #3182ce;
+  color: white;
+  margin: 5px;
+}
+
+button[onclick*="calculerMoyenne"]:hover {
+  background-color: #2b6cb0;
+}
+
+/* Bouton Effacer */
+button[type="reset"] {
+  background-color: #e53e3e;
+  color: white;
+  margin: 5px;
+}
+
+button[type="reset"]:hover {
+  background-color: #c53030;
+}
+
+/* --- Section Résultat --- */
+section {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #ebf8ff;
+  border-left: 5px solid #3182ce;
+  border-radius: 6px;
+}
+section h2 {
+  font-size: 1.2rem;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+ section p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+output#moyenne-finale {
+  color: #2b6cb0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* --- Responsive (Écrans mobiles) --- */
+@media (max-width: 600px) {
+  .ligne-matiere {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .ligne-matiere label {
+    margin-top: 5px;
+  }
+}
+#tete{
+    background: #05057e; 
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.8em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    top: 50px;
+
+}
